@@ -1,5 +1,16 @@
 console.log("script.js connected!");
 const answerButtons = document.querySelectorAll(".answer-btn");
+answerButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove the 'active' class from all buttons first
+        button.forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Add the 'active' class to the clicked button
+        button.classList.add('active');
+
+        });
 const questionContainer = document.getElementById("question-container");
 const blue = document.getElementById("blue");
 const brown = document.getElementById("brown");
