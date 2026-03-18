@@ -1,6 +1,10 @@
 console.log("script.js connected!");
 const answerButtons = document.querySelectorAll(".answer-btn");
-const blueScore = (0);
-const brownScore = (0);
-const greenScore = (0);
-const redScore = (0);
+const questionContainer = document.getElementById("question-container");
+answerButtons.addEventListener("click", handleAnswerClick);
+const userScore = (0);
+const blueScore = (1);
+const brownScore = (2);
+const greenScore = (3);
+const redScore = (4);
+
