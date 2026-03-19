@@ -84,7 +84,7 @@ const descriptions = {
   red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed."};
 const shwResultBtn = document.getElementById("#show-result");
 shwResultBtn.addEventListener("click", getResult)
-console.log("results was clicked")};
+console.log("results was clicked");
   
 
 const questionContainer = document.getElementById("question-container");
