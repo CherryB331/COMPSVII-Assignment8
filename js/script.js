@@ -64,7 +64,7 @@ forscoring.addEventListener("click", () => {
 })})
 
 function getResult() {
-  let highest = 0;
+  let highest = 2;
   let result = "";
 
   for (let type in scores) {
@@ -82,7 +82,6 @@ const descriptions = {
   brown: "You crave stability. If type A was a color; it would be brown.You are a Thinker! You analyze everything.",
   green: "You are Chill! You go with the flow. You move where ever the wind takes you. Most o fthe time, it takes you to the couch.",
   red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed."
-  rainbow: "You are a Rainbow! You are a unique blend of all the colors. You have a little bit of everything in you, and that's what makes you special."
 };
   const shwResultBtn = document.querySelector("#show-result");
 
@@ -102,4 +101,4 @@ if (getResult() === "blue") {queOne.style.display = "none"; queTwo.style.display
 else if (getResult() === "brown") {queOne.style.display = "none"; queTwo.style.display = "none"; queThr.style.display = "none"; queFor.style.display = "none"; marron.style.display = "block";}
 else if (getResult() === "green") {queOne.style.display = "none"; queTwo.style.display = "none"; queThr.style.display = "none"; queFor.style.display = "none"; verde.style.display = "block";}
 else if (getResult() === "red") {queOne.style.display = "none"; queTwo.style.display = "none"; queThr.style.display = "none"; queFor.style.display = "none"; rojo.style.display = "block";}
-else if (getResult() === "rainbow") {queOne.style.display = "none"; queTwo.style.display = "none"; queThr.style.display = "none"; queFor.style.display = "none"; rainbow.style.display = "block";}
+else {queOne.style.display = "none"; queTwo.style.display = "none"; queThr.style.display = "none"; queFor.style.display = "none"; rainbow.style.display = "block";}
