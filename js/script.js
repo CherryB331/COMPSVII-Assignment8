@@ -75,7 +75,7 @@ function getResult() {
   }
   return result; 
 }
-if (getResult() === "2") {console.log("You are a Rainbow! You are a mix of all the colors. You have a little bit of each color in you, and that's what makes you special!");}
+if (getResult() <= 2) {console.log("You are a Rainbow! You are a mix of all the colors. You have a little bit of each color in you, and that's what makes you special!");}
 const colorType = document.getElementById("#result-container")
 
 const descriptions = {
