@@ -62,7 +62,26 @@ forscoring.addEventListener("click", () => {
   scores[type]++;
   console.log(scores);
 })})
-    // Add logic to check if answer is correct here
+
+function getResult() {
+  let highest = 0;
+  let result = "";
+
+  for (let type in scores) {
+    if (scores[type] > highest) {
+      highest = scores[type];
+      result = type;
+    }
+  }
+  return result;
+}
+const colorType = document.getElementById("#result-container")
+const resultButton = document.getElementById("#show-result");
+const descriptions = {
+  blue: "You are in tune to your emotions. Sometimes they are overwhelming, but it's one of your strengths.",
+  brown: "You crave stability. If type A was a color; it would be brown.You are a Thinker! You analyze everything.",
+  green: "You are Chill! You go with the flow. You move where ever the wind takes you. Most o fthe time, it takes you to the couch.",
+  red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed."};
   
 
 const questionContainer = document.getElementById("question-container");
