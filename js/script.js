@@ -1,26 +1,68 @@
 console.log("script.js connected!");
-const answerButtons = document.querySelectorAll(".answer-btn");
+let scores = {
+  brown : 0,
+  blue : 0,
+  green : 0,
+  red : 0
+};
+const queOne = document.querySelectorAll("#qOne");
+queOne.forEach(button => {
+  button.addEventListener("click", () => {
+    queOne.forEach(btn => {
+      btn.disabled = true;
+    });
+  });
+});
+const queTwo = document.querySelectorAll("#qTwo");
+queTwo.forEach(button => {
+  button.addEventListener("click", () => {
+    queTwo.forEach(btn => {
+      btn.disabled = true;
+    });
+  });
+});
+const queThr = document.querySelectorAll("#qThr");
+queThr.forEach(button => {
+  button.addEventListener("click", () => {
+   queThr.forEach(btn => {
+      btn.disabled = true;
+    });
+  });
+});
+const queFor = document.querySelectorAll("#qFor");
+queFor.forEach(button => {
+  button.addEventListener("click", () => {
+   queFor.forEach(btn => {
+      btn.disabled = true;
+    });
+  });
+});
+
+queOne.forEach(onescoring => {
+onescoring.addEventListener("click", () => {
+  const type = onescoring.dataset.answer;
+  scores[type]++;
+  console.log(scores);
+})})
+queTwo.forEach(twoscoring => {
+twoscoring.addEventListener("click", () => {
+  const type = twoscoring.dataset.answer;
+  scores[type]++;
+  console.log(scores);
+})})
+queThr.forEach(thrscoring => {
+thrscoring.addEventListener("click", () => {
+  const type = thrscoring.dataset.answer;
+  scores[type]++;
+  console.log(scores);
+})})
+queFor.forEach(forscoring => {
+forscoring.addEventListener("click", () => {
+  const type = forscoring.dataset.answer;
+  scores[type]++;
+  console.log(scores);
+})})
+    // Add logic to check if answer is correct here
+  
+
 const questionContainer = document.getElementById("question-container");
-const blue = document.getElementById("blue");
-const brown = document.getElementById("brown");
-const green = document.getElementById("green");
-const red = document.getElementById("red");
-blue.addEventListener("click", blueScoring);
-function blueScoring(userScore, blueScore) { return userScore + blueScore; }
-
-brown.addEventListener("click", brownScoring);
-function brownScoring(userScore, brownScore) { return userScore + brownScore; }
-
-green.addEventListener("click", greenScoring);
-function greenScoring(userScore, greenScore) { return userScore + greenScore; }
-
-red.addEventListener("click", redScoring);
-function redScoring(userScore, redScore) { return userScore + redScore; }
-    function redScoring(userScore, redScore) {userScore + redScore};
-
-const userScore = (0);
-const blueScore = (1);
-const brownScore = (2);
-const greenScore = (3);
-const redScore = (4);
-
