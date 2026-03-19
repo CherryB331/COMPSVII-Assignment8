@@ -82,6 +82,9 @@ const descriptions = {
   brown: "You crave stability. If type A was a color; it would be brown.You are a Thinker! You analyze everything.",
   green: "You are Chill! You go with the flow. You move where ever the wind takes you. Most o fthe time, it takes you to the couch.",
   red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed."};
+const shwResultBtn = document.getElementById("#show-result");
+function ending(shwResultBtn){shwResultBtn.addEventListener("click", showResult)
+console.log("results was clicked")};
   
 
 const questionContainer = document.getElementById("question-container");
