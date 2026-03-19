@@ -73,7 +73,7 @@ function getResult() {
       result = type;
     }
   }
-  return result;
+  return result; console.log("Your color is" + result + ":" + descriptions[result]);
 }
 const colorType = document.getElementById("#result-container")
 const resultButton = document.getElementById("#show-result");
