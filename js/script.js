@@ -1,37 +1,90 @@
 console.log("script.js connected!");
-const answerButtons = document.querySelectorAll(".answer-btn");
-answerButtons.forEach(btun => {
-    btun.addEventListener('click', () => {
-        // Remove the 'active' class from all buttons first
-        answerButtons.forEach(btn => {
-            btnu.classList.remove('active');
-        });
+let scores = {
+  brown : 0,
+  blue : 0,
+  green : 0,
+  red : 0
+};
+const queOne = document.querySelectorAll("#qOne");
+queOne.forEach(button => {
+  button.addEventListener("click", () => {
+    queOne.forEach(btn => {
+      btn.disabled = true;
+    });
+  });
+});
+const queTwo = document.querySelectorAll("#qTwo");
+queTwo.forEach(button => {
+  button.addEventListener("click", () => {
+    queTwo.forEach(btn => {
+      btn.disabled = true;
+    });
+  });
+});
+const queThr = document.querySelectorAll("#qThr");
+queThr.forEach(button => {
+  button.addEventListener("click", () => {
+   queThr.forEach(btn => {
+      btn.disabled = true;
+    });
+  });
+});
+const queFor = document.querySelectorAll("#qFor");
+queFor.forEach(button => {
+  button.addEventListener("click", () => {
+   queFor.forEach(btn => {
+      btn.disabled = true;
+    });
+  });
+});
 
-        // Add the 'active' class to the clicked button
-        btun.classList.add('active');
+queOne.forEach(onescoring => {
+onescoring.addEventListener("click", () => {
+  const type = onescoring.dataset.answer;
+  scores[type]++;
+  console.log(scores);
+})})
+queTwo.forEach(twoscoring => {
+twoscoring.addEventListener("click", () => {
+  const type = twoscoring.dataset.answer;
+  scores[type]++;
+  console.log(scores);
+})})
+queThr.forEach(thrscoring => {
+thrscoring.addEventListener("click", () => {
+  const type = thrscoring.dataset.answer;
+  scores[type]++;
+  console.log(scores);
+})})
+queFor.forEach(forscoring => {
+forscoring.addEventListener("click", () => {
+  const type = forscoring.dataset.answer;
+  scores[type]++;
+  console.log(scores);
+})})
 
-        });
+function getResult() {
+  let highest = 0;
+  let result = "";
+
+  for (let type in scores) {
+    if (scores[type] > highest) {
+      highest = scores[type];
+      result = type;
+    }
+  }
+  return result;
+}
+const colorType = document.getElementById("#result-container")
+const resultButton = document.getElementById("#show-result");
+const descriptions = {
+  blue: "You are in tune to your emotions. Sometimes they are overwhelming, but it's one of your strengths.",
+  brown: "You crave stability. If type A was a color; it would be brown.You are a Thinker! You analyze everything.",
+  green: "You are Chill! You go with the flow. You move where ever the wind takes you. Most o fthe time, it takes you to the couch.",
+  red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed."};
+const shwResultBtn = document.getElementById("#show-result");
+function ending(shwResultBtn){shwResultBtn.addEventListener("click", showResult)
+console.log("results was clicked")};
+  
+
 const questionContainer = document.getElementById("question-container");
-const blue = document.getElementById("blue");
-const brown = document.getElementById("brown");
-const green = document.getElementById("green");
-const red = document.getElementById("red");
-blue.addEventListener("click", blueScoring);
-function blueScoring(userScore, blueScore) { return userScore + blueScore; }
-
-brown.addEventListener("click", brownScoring);
-function brownScoring(userScore, brownScore) { return userScore + brownScore; }
-
-green.addEventListener("click", greenScoring);
-function greenScoring(userScore, greenScore) { return userScore + greenScore; }
-
-red.addEventListener("click", redScoring);
-function redScoring(userScore, redScore) { return userScore + redScore; }
-    function redScoring(userScore, redScore) {userScore + redScore};
-
-const userScore = (0);
-const blueScore = (1);
-const brownScore = (2);
-const greenScore = (3);
-const redScore = (4);
-
