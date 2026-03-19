@@ -76,7 +76,7 @@ function getResult() {
   return result; 
 }
 const colorType = document.getElementById("#result-container")
-const resultButton = document.getElementById("#show-result");
+
 const descriptions = {
   blue: "You are in tune to your emotions. Sometimes they are overwhelming, but it's one of your strengths.",
   brown: "You crave stability. If type A was a color; it would be brown.You are a Thinker! You analyze everything.",
@@ -84,11 +84,10 @@ const descriptions = {
   red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed."};
 const shwResultBtn = document.getElementById("#show-result");
 
-console.log("results was clicked");
-function displayResult() {shwResultBtn.addEventListener("click", displayResult)
-  const result = getResult();
+function displayResult() {.addEventListener("click", displayResult)
   const description = descriptions[result];
   colorType.textContent = "Your color is " + result + ": " + description;
-}
-console.log("Your color is" + result + ":" + descriptions[result]);
+console.log("Your color is" + result + ":" + descriptions[result])};
 const questionContainer = document.getElementById("question-container");
+const shwResultBtn = document.getElementById("#show-result");
+shwResultBtn.addEventListener("click", displayResult);
