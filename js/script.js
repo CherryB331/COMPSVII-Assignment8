@@ -98,6 +98,7 @@ function showColorResult( ){
   queTwo.display = "none";
   queThr.display = "none";
   queFor.display = "none";
+  questionContainer.display = "none";
 console.log("Your color is " + result + ": " + descriptions[result])};
 const questionContainer = document.getElementById("question-container");
 shwResultBtn.addEventListener("click", showColorResult);
