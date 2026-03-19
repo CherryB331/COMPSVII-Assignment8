@@ -83,7 +83,7 @@ const descriptions = {
   green: "You are Chill! You go with the flow. You move where ever the wind takes you. Most o fthe time, it takes you to the couch.",
   red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed."};
 const shwResultBtn = document.getElementById("#show-result");
-function ending(shwResultBtn){shwResultBtn.addEventListener("click", showResult)
+shwResultBtn.addEventListener("click", getResult)
 console.log("results was clicked")};
   
 
