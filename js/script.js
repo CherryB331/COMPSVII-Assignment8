@@ -90,4 +90,4 @@ function showColorResult( ){
   colorType.textContent = "Your color is " + result + ": " + description;
 console.log("Your color is " + result + ": " + descriptions[result])};
 const questionContainer = document.getElementById("question-container");
-shwResultBtn.addEventListener("click", displayResult);
+shwResultBtn.addEventListener("click", showColorResult);
