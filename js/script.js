@@ -82,12 +82,12 @@ const descriptions = {
   brown: "You crave stability. If type A was a color; it would be brown.You are a Thinker! You analyze everything.",
   green: "You are Chill! You go with the flow. You move where ever the wind takes you. Most o fthe time, it takes you to the couch.",
   red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed."};
-const shwResultBtn = document.getElementById("#show-result");
+const shwResultBtn = document.querySelector("#show-result");
 
-function displayResult() {.addEventListener("click", displayResult)
+function showColorResult( ){
+  const result = getResult();
   const description = descriptions[result];
   colorType.textContent = "Your color is " + result + ": " + description;
-console.log("Your color is" + result + ":" + descriptions[result])};
+console.log("Your color is " + result + ": " + descriptions[result])};
 const questionContainer = document.getElementById("question-container");
-const shwResultBtn = document.getElementById("#show-result");
 shwResultBtn.addEventListener("click", displayResult);
