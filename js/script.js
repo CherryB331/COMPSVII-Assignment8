@@ -3,7 +3,8 @@ let scores = {
   brown : 0,
   blue : 0,
   green : 0,
-  red : 0
+  red : 0,
+  rainbow : 0
 };
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
@@ -73,16 +74,19 @@ function getResult() {
       result = type;
     }
   }
-  return result; 
+  if (result === "") {
+    result = "rainbow";
+  }
+  return result;
 }
-if (getResult() <= 2) {console.log("You are a Rainbow! You are a mix of all the colors. You have a little bit of each color in you, and that's what makes you special!");}
-const colorType = document.getElementById("#result-container")
+
 
 const descriptions = {
   blue: "You are in tune to your emotions. Sometimes they are overwhelming, but it's one of your strengths.",
   brown: "You crave stability. If type A was a color; it would be brown.You are a Thinker! You analyze everything.",
   green: "You are Chill! You go with the flow. You move where ever the wind takes you. Most o fthe time, it takes you to the couch.",
-  red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed."
+  red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed.",
+  rainbow: "You are a unique individual! You don't fit into any one category, and that's what makes you special."
 };
   const shwResultBtn = document.querySelector("#show-result");
 
