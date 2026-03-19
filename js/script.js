@@ -93,11 +93,7 @@ const descriptions = {
 function showColorResult( ){
   const result = getResult();
   const description = descriptions[result];
-  questionContainer.remove();
-  queOne.remove();
-  queTwo.remove();
-  queThr.remove();
-  queFor.remove();
+
   descriptions.textContent = "Your color is " + result + ": " + description;
 console.log("Your color is " + result + ": " + descriptions[result])};
 const questionContainer = document.getElementById("question-container");
