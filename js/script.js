@@ -94,10 +94,6 @@ function showColorResult( ){
   const result = getResult();
   const description = descriptions[result];
   descriptions.textContent = "Your color is " + result + ": " + description;
-  queOne.display = "none";
-  queTwo.display = "none";
-  queThr.display = "none";
-  queFor.display = "none";
   questionContainer.display = "none";
 console.log("Your color is " + result + ": " + descriptions[result])};
 const questionContainer = document.getElementById("question-container");
