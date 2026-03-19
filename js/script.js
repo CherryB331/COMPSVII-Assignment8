@@ -112,4 +112,3 @@ if (getResult() === "blue") {azul.style.display = "block";}
 else if (getResult() === "brown") {marron.style.display = "block";}
 else if (getResult() === "green") {verde.style.display = "block";}
 else if (getResult() === "red") {rojo.style.display = "block";}
-else if (getResult() === "rainbow") {rainBow.style.display = "block";}
