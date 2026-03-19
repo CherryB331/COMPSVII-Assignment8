@@ -1,10 +1,10 @@
 console.log("script.js connected!");
 let scores = {
-  brown : 0, marron
-  blue : 0, azul
-  green : 0, verde
-  red : 0, rojo
-  rainbow : 0, rainBow
+  brown : 0, 
+  blue : 0,
+  green : 0, 
+  red : 0, 
+  rainbow : 0, 
 };
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
