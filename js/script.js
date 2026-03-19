@@ -73,7 +73,7 @@ function getResult() {
       result = type;
     }
   }
-  return result; console.log("Your color is" + result + ":" + descriptions[result]);
+  return result; 
 }
 const colorType = document.getElementById("#result-container")
 const resultButton = document.getElementById("#show-result");
@@ -83,8 +83,12 @@ const descriptions = {
   green: "You are Chill! You go with the flow. You move where ever the wind takes you. Most o fthe time, it takes you to the couch.",
   red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed."};
 const shwResultBtn = document.getElementById("#show-result");
-shwResultBtn.addEventListener("click", getResult)
-console.log("results was clicked");
-  
 
+console.log("results was clicked");
+function displayResult() {shwResultBtn.addEventListener("click", displayResult)
+  const result = getResult();
+  const description = descriptions[result];
+  colorType.textContent = "Your color is " + result + ": " + description;
+}
+console.log("Your color is" + result + ":" + descriptions[result]);
 const questionContainer = document.getElementById("question-container");
