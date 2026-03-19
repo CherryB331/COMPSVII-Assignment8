@@ -1,10 +1,10 @@
 console.log("script.js connected!");
 let scores = {
-  brown : 0,
-  blue : 0,
-  green : 0,
-  red : 0,
-  rainbow : 0
+  brown : 0, marron
+  blue : 0, azul
+  green : 0, verde
+  red : 0, rojo
+  rainbow : 0, rainBow
 };
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
@@ -94,6 +94,10 @@ function showColorResult( ){
   const result = getResult();
   const description = descriptions[result];
   descriptions.textContent = "Your color is " + result + ": " + description;
+  queOne.display = "none";
+  queTwo.display = "none";
+  queThr.display = "none";
+  queFor.display = "none";
 console.log("Your color is " + result + ": " + descriptions[result])};
 const questionContainer = document.getElementById("question-container");
 shwResultBtn.addEventListener("click", showColorResult);
@@ -101,9 +105,4 @@ let azul = document.getElementById("#azul");
 let marron = document.getElementById("#marron");
 let verde = document.getElementById("#verde");
 let rojo  = document.getElementById("#rojo");
-let rainbow = document.getElementById("#rainbow");
-if (getResult() === "blue") {queOne.style.display = "none"; queTwo.style.display = "none"; queThr.style.display = "none"; queFor.style.display = "none"; azul.style.display = "block";}
-else if (getResult() === "brown") {queOne.style.display = "none"; queTwo.style.display = "none"; queThr.style.display = "none"; queFor.style.display = "none"; marron.style.display = "block";}
-else if (getResult() === "green") {queOne.style.display = "none"; queTwo.style.display = "none"; queThr.style.display = "none"; queFor.style.display = "none"; verde.style.display = "block";}
-else if (getResult() === "red") {queOne.style.display = "none"; queTwo.style.display = "none"; queThr.style.display = "none"; queFor.style.display = "none"; rojo.style.display = "block";}
-else {queOne.style.display = "none"; queTwo.style.display = "none"; queThr.style.display = "none"; queFor.style.display = "none"; rainbow.style.display = "block";}
+let rainBow = document.getElementById("#rainbow");
