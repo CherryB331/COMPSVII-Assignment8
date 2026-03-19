@@ -4,3 +4,9 @@
     border-color: #007bff;
 }
   .btn btn-outline-primary w-100 answer-btn {color:(rgb(235, 20, 217));}
+
+  #azul {background-color: rgb(138, 208, 243);color:#021f3e}
+    #verde {background-color: rgb(148, 238, 148);color:#063e02}
+    #marron {background-color: rgb(169, 121, 97);color:#3e3002}
+    #rojo {background-color: rgb(243, 138, 138);color:#3e0202}
+    #rainbow {background-color: rgb(216, 128, 216);color:rgb(51, 50, 13)}

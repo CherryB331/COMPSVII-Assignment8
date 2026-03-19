@@ -93,8 +93,12 @@ const descriptions = {
 function showColorResult( ){
   const result = getResult();
   const description = descriptions[result];
+  questionContainer.remove();
+  queOne.remove();
+  queTwo.remove();
+  queThr.remove();
+  queFor.remove();
   descriptions.textContent = "Your color is " + result + ": " + description;
-  questionContainer.display = "none";
 console.log("Your color is " + result + ": " + descriptions[result])};
 const questionContainer = document.getElementById("question-container");
 shwResultBtn.addEventListener("click", showColorResult);
@@ -103,3 +107,9 @@ let marron = document.getElementById("#marron");
 let verde = document.getElementById("#verde");
 let rojo  = document.getElementById("#rojo");
 let rainBow = document.getElementById("#rainbow");
+
+if (getResult() === "blue") {azul.style.display = "block";}
+else if (getResult() === "brown") {marron.style.display = "block";}
+else if (getResult() === "green") {verde.style.display = "block";}
+else if (getResult() === "red") {rojo.style.display = "block";}
+else if (getResult() === "rainbow") {rainBow.style.display = "block";}
