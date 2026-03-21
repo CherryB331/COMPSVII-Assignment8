@@ -57,8 +57,8 @@ function getResult() {
   let result = "";
 
   for (let type in scores) {
-    if (counter[type] > highest) {
-      highest = counter[type];
+    if (scores[type] > highest) {
+      highest = scores[type];
       result = type;
     }
   }
