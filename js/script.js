@@ -61,8 +61,8 @@ colorScore.forEach(type => {counter[type] = (counter[type] || 0) + 1;});
   let result = "";
 
   for (let type in scores) {
-    if (scores[type] > highest) {
-      highest = scores[type];
+    if (counter[type] > highest) {
+      highest = counter[type];
       result = type;
     }
   }
