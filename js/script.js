@@ -90,7 +90,7 @@ const descriptions = {
   rainbow: "You are a unique individual! You don't fit into any one category, and that's what makes you special."
 };
   const shwResultBtn = document.querySelector("#show-result");
-let questionContainer = document.getElementById("question-container");
+let questionContainer = document.getElementById("#question-container");
 let announcement = document.getElementById("#announce");
 console.log(questionContainer);
 shwResultBtn.addEventListener("click", showColorResult);
