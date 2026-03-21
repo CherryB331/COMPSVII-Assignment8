@@ -82,7 +82,9 @@ function getResult() {
 
 function showColorResult() {
     const colorResult = getResult();
-    console.log("Your color is " + colorResult + ": " + descriptions[colorResult]);}
+    console.log("Your color is " + colorResult + ": " + descriptions[colorResult]);
+document.getElementById("question-container").style.display = "none";
+document.getElementById("announce" + "result-" + colorResult).style.display = "block";}
 const descriptions = {
   blue: "You are in tune to your emotions. Sometimes they are overwhelming, but it's one of your strengths.",
   brown: "You crave stability. If type A was a color; it would be brown.You are a Thinker! You analyze everything.",
@@ -91,8 +93,7 @@ const descriptions = {
   rainbow: "You are a unique individual! You don't fit into any one category, and that's what makes you special."
 };
   const shwResultBtn = document.querySelector("#show-result");
-let quizContainer = document.getElementById("quiz-container");
-console.log(quizContainer);
 let questionContainer = document.getElementById("question-container");
+let announcement = document.getElementById("#announce");
 console.log(questionContainer);
 shwResultBtn.addEventListener("click", showColorResult);
