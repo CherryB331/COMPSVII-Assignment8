@@ -74,7 +74,7 @@ function getResult() {
       result = type;
     }
   }
-  if (scores[type] <= 2) {
+  if (highest <= 2) {
     result = "rainbow";
   }
   return result;
@@ -84,6 +84,8 @@ let colorEnd = document.getElementById("#result-container");
 function showColorResult() {
     const colorResult = getResult();
     console.log("Your color is " + colorResult + ": " + descriptions[colorResult]);
+    console.log("Scores:", scores);
+    console.log("highest score:", result + " with a score of " + highest);
     console.log(result)
 document.getElementById("question-container").style.display = "none";
 document.getElementById("show-result").style.display = "none";
