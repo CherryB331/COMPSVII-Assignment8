@@ -74,7 +74,7 @@ function getResult() {
       result = type;
     }
   }
-  if (highest <= 2) {
+  if (scores[type] <= 2) {
     result = "rainbow";
   }
   return result;
