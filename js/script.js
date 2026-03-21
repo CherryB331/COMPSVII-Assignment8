@@ -1,4 +1,4 @@
-console.log("script.js connected!");
+console.log("script.js connected!");let scores = {
 let scores = [red, blue, green, brown] = [0, 0, 0, 0];
 
 const queOne = document.querySelectorAll("#qOne");
