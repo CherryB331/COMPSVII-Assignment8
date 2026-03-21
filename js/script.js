@@ -1,5 +1,5 @@
 console.log("script.js connected!");
-const scores = {
+let scores = {
   brown : 0, 
   blue : 0,
   green : 0, 
@@ -54,7 +54,7 @@ queFor.forEach(forbutton => {
 
 function getResult() {
 let counter = {};
-Object.keys(scores).forEach(type => {counter[type] = (counter[type] || 0) + 1;});
+scores.forEach(type => {counter[type] = (counter[type] || 0) + 1;});
 
   let highest = 0;
   let result = "";
