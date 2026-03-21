@@ -29,11 +29,12 @@ queTwo.forEach(twobutton => {
 });
 const queThr = document.querySelectorAll("#qThr");
 queThr.forEach(thrbutton => {
-  thrbutton.addEventListener("click", () => {
-   queThr.forEach(btn => { 
-    const type = thrbutton.dataset.answer;
+  thrbutton.addEventListener("click", () => {  
+     const type = thrbutton.dataset.answer;
   scores[type]++;
   console.log(scores);
+   queThr.forEach(btn => { 
+ 
       btn.disabled = true;
     });
   });
@@ -41,10 +42,11 @@ queThr.forEach(thrbutton => {
 const queFor = document.querySelectorAll("#qFor");
 
 queFor.forEach(forbutton => {
-  forbutton.addEventListener("click", () => {   
-   queFor.forEach(btn => { const type = forbutton.dataset.answer;
+  forbutton.addEventListener("click", () => {  
+    const type = forbutton.dataset.answer;
   scores[type]++;
-  console.log(scores);
+  console.log(scores);  
+   queFor.forEach(btn => {
       btn.disabled = true;
     });
   });
