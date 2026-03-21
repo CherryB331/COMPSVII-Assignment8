@@ -12,17 +12,16 @@ document.getElementById("result-brown").style.display = "none";
 document.getElementById("result-rainbow").style.display = "none";
 
 const queOne = document.querySelectorAll(".qOne");
-queOne.forEach(button => {
+  queOne.forEach(button => {
   button.addEventListener("click", () => { 
      const type = button.dataset.answer;    
   scores[type]++;
   console.log(scores);
   queOne.forEach(btn => 
-    btn.classList.remove("selected");); 
-     button.classList.add("selected")
+    btn.classList.remove("selected"));
+     button.classList.add("selected");
     queOne.forEach(btn => 
       {btn.disabled = true;});
-;
   });
 });
 const queTwo = document.querySelectorAll(".qTwo");
@@ -33,7 +32,7 @@ queTwo.forEach(twobutton => {
   scores[type]++;
   console.log(scores);
   queTwo.forEach(btn => 
-    btn.classList.remove("selected"););
+    btn.classList.remove("selected"));
     twobutton.classList.add("selected");
     queTwo.forEach(btn => 
      { btn.disabled = true;});
@@ -47,7 +46,7 @@ queThr.forEach(thrbutton => {
   scores[type]++;
   console.log(scores);
     queThr.forEach(btn => 
-        btn.classList.remove("selected"););
+        btn.classList.remove("selected"));
     thrbutton.classList.add("selected");    
    queThr.forEach(btn => { 
       btn.disabled = true;
@@ -63,7 +62,7 @@ queFor.forEach(forbutton => {
   scores[type]++;
   console.log(scores);
     queFor.forEach(btn =>  
-     btn.classList.remove("selected"););
+     btn.classList.remove("selected"));
     forbutton.classList.add("selected");
    queFor.forEach(btn => {
       btn.disabled = true;
