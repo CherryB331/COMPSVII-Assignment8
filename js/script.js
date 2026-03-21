@@ -10,7 +10,8 @@ document.getElementById("result-blue").style.display = "none";
 document.getElementById("result-green").style.display = "none";
 document.getElementById("result-brown").style.display = "none";
 document.getElementById("result-rainbow").style.display = "none";
-const queOne = document.querySelectorAll("#qOne");
+
+const queOne = document.querySelectorAll(".qOne");
 queOne.forEach(button => {
   button.addEventListener("click", () => { 
     button.classList.add("selected");
@@ -22,7 +23,7 @@ queOne.forEach(button => {
     });
   });       
 });
-const queTwo = document.querySelectorAll("#qTwo");
+const queTwo = document.querySelectorAll(".qTwo");
 queTwo.forEach(twobutton => {
   twobutton.addEventListener("click", () => {  
     twobutton.classList.add("selected");
@@ -34,7 +35,7 @@ queTwo.forEach(twobutton => {
     });
   });
 });
-const queThr = document.querySelectorAll("#qThr");
+const queThr = document.querySelectorAll(".qThr");
 queThr.forEach(thrbutton => {
   thrbutton.addEventListener("click", () => {   
     thrbutton.classList.add("selected");
@@ -46,10 +47,11 @@ queThr.forEach(thrbutton => {
     });
   });
 });
-const queFor = document.querySelectorAll("#qFor");
+const queFor = document.querySelectorAll(".qFor");
 
 queFor.forEach(forbutton => {
-  forbutton.addEventListener("click", () => {forbutton.classList.add("selected")
+  forbutton.addEventListener("click", () => {
+    forbutton.classList.add("selected")
     const type = forbutton.dataset.answer;
   scores[type]++;
   console.log(scores);  
