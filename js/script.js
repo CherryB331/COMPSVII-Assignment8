@@ -96,7 +96,7 @@ const descriptions = {
   const shwResultBtn = document.querySelector("#show-result");
 let quizContainer = document.getElementById("quiz-container");
 console.log(quizContainer);
-console.log("Your color is " + result + ": " + descriptions[result])};
+console.log("Your color is " + result + ": " + descriptions[result]);
 let questionContainer = document.getElementById("question-container");
 console.log(questionContainer);
 shwResultBtn.addEventListener("click", showColorResult);
