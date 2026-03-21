@@ -83,6 +83,7 @@ function showColorResult() {
     let result = getResult();
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("announce" + "result-" + result).style.display = "block";
+    console.log("Your color is " + result + ": " + descriptions[result]);
 }
 
 const descriptions = {
@@ -93,13 +94,8 @@ const descriptions = {
   rainbow: "You are a unique individual! You don't fit into any one category, and that's what makes you special."
 };
   const shwResultBtn = document.querySelector("#show-result");
-
-function showColorResult( ){
-  const result = getResult();
-  const description = descriptions[result];
 let quizContainer = document.getElementById("quiz-container");
 console.log(quizContainer);
-  descriptions.textContent = "Your color is " + result + ": " + description;
 console.log("Your color is " + result + ": " + descriptions[result])};
 let questionContainer = document.getElementById("question-container");
 console.log(questionContainer);
