@@ -17,59 +17,57 @@ queOne.forEach(button => {
      const type = button.dataset.answer;    
   scores[type]++;
   console.log(scores);
-  queOne.forEach(bttn => {
-    bttn.classList.remove("selected");
-  button.classList.add("selected");
-    queOne.forEach(btn => {
-      btn.disabled = true;
-    });
-  });
+  queOne.forEach(bttn => 
+    {bttn.classList.remove("selected"); } );
+    queOne.forEach(btn => 
+      {btn.disabled = true;});
+   button.classList.add("selected");
   });
 });
 const queTwo = document.querySelectorAll(".qTwo");
 queTwo.forEach(twobutton => {
   twobutton.addEventListener("click", () => {  
-    twobutton.classList.add("selected");
+    
     const type = twobutton.dataset.answer;
   scores[type]++;
   console.log(scores);
   queTwo.forEach(bttn => {
-    bttn.classList.remove("selected");
-    queTwo.forEach(btn => {
-      btn.disabled = true;
-    });
-  });
+    bttn.classList.remove("selected"); });
+    twobutton.classList.add("selected");
+    queTwo.forEach(btn => 
+     { btn.disabled = true;});
+ 
   });
 });
 const queThr = document.querySelectorAll(".qThr");
 queThr.forEach(thrbutton => {
   thrbutton.addEventListener("click", () => {   
-    thrbutton.classList.add("selected");
      const type = thrbutton.dataset.answer;
   scores[type]++;
   console.log(scores);
     queThr.forEach(bttn => {
-        bttn.classList.remove("selected");
+        bttn.classList.remove("selected");});
+    thrbutton.classList.add("selected");    
    queThr.forEach(btn => { 
       btn.disabled = true;
     });
-  });
   });
 });
 const queFor = document.querySelectorAll(".qFor");
 
 queFor.forEach(forbutton => {
   forbutton.addEventListener("click", () => {
-    forbutton.classList.add("selected");
+    
     const type = forbutton.dataset.answer;
   scores[type]++;
   console.log(scores);
     queFor.forEach(bttn => {   
-        bttn.classList.remove("selected");
+     bttn.classList.remove("selected");});
+    forbutton.classList.add("selected");
    queFor.forEach(btn => {
       btn.disabled = true;
     });
-  });
+
   });
 });
 
