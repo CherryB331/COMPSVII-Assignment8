@@ -87,7 +87,7 @@ const descriptions = {
   red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed.",
   rainbow: "You are a unique individual! You don't fit into any one category, and that's what makes you special."
 };
-  const shwResultBtn = document.querySelector("show-result");
+  const shwResultBtn = document.querySelector("#show-result");
 let questionContainer = document.getElementById("question-container");
 let announcement = document.getElementById("announce");
 console.log(questionContainer);
