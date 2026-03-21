@@ -5,7 +5,7 @@ let scores = {
   green: 0,
   red: 0
 };
-let colorScore = [blue, brown, green, red];
+let colorScore = [ scores.blue, scores.brown, scores.green, scores.red];
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
   button.addEventListener("click", () => {
