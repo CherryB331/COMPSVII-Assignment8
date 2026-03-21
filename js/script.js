@@ -3,8 +3,7 @@ let scores = {
   brown : 0, 
   blue : 0,
   green : 0, 
-  red : 0, 
-  rainbow : 0, 
+  red : 0,  
 };
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
@@ -75,7 +74,7 @@ function getResult() {
     }
   }
   if (highest <= 2) {
-    result = "rainbow";
+    return "rainbow";
   }
   return result;
 }
