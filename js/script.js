@@ -79,13 +79,10 @@ function getResult() {
   }
   return result;
 }
-function showColorResult() {
-    let resulty = getResult();
-    document.getElementById("quiz-container").style.display = "none";
-    document.getElementById("announce" + "result-" + resulty).style.display = "block";
-    console.log("Your color is " + resulty + ": " + descriptions[resulty]);
-}
 
+function showColorResult() {
+    const colorResult = getResult();
+    console.log("Your color is " + colorResult + ": " + descriptions[colorResult]);}
 const descriptions = {
   blue: "You are in tune to your emotions. Sometimes they are overwhelming, but it's one of your strengths.",
   brown: "You crave stability. If type A was a color; it would be brown.You are a Thinker! You analyze everything.",
