@@ -67,7 +67,6 @@ function getResult() {
   }
   return { result, highest };
 }
-let result = getResult();
 let colorEnd = document.getElementById("result-container");
 function showColorResult() {
     const {result, highest} = getResult();
