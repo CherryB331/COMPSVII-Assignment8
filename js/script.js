@@ -92,7 +92,37 @@ const descriptions = {
   red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed.",
   rainbow: "You are a unique individual! You don't fit into any one category, and that's what makes you special."
 };
+
+const restartBtn = document.getElementById("restart-quiz");
+
+    
+function restartQuiz() {
+  // Reset scores
+  scores.blue = 0;
+  scores.brown = 0;
+  scores.green = 0;
+  scores.red = 0;
+
+  // Show quiz again
+  document.getElementById("question-container").style.display = "block";
+  document.getElementById("show-result").style.display = "block";
+
+  // Hide result sections
+  document.getElementById("announce").style.display = "none";
+  document.getElementById("result-container").style.display = "none";
+
+  // Hide all individual results
+  const allResults = ["blue", "brown", "green", "red", "rainbow"];
+  allResults.forEach(color => {
+    const el = document.getElementById("result-" + color);
+    if (el) el.style.display = "none";
+  });
+
+  console.log("Quiz reset. Scores:", scores);
+}
+ 
   const shwResultBtn = document.querySelector("#show-result");
+  restartBtn.addEventListener ("click", (restartQuiz));
 let questionContainer = document.getElementById("question-container");
 let announcement = document.getElementById("announce");
 console.log(questionContainer);
