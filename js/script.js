@@ -14,14 +14,17 @@ document.getElementById("result-rainbow").style.display = "none";
 const queOne = document.querySelectorAll(".qOne");
 queOne.forEach(button => {
   button.addEventListener("click", () => { 
-    button.classList.add("selected");
      const type = button.dataset.answer;    
   scores[type]++;
   console.log(scores);
+  queOne.forEach(bttn => {
+    bttn.classList.remove("selected");
+  button.classList.add("selected");
     queOne.forEach(btn => {
       btn.disabled = true;
     });
-  });       
+  });
+  });
 });
 const queTwo = document.querySelectorAll(".qTwo");
 queTwo.forEach(twobutton => {
@@ -30,9 +33,12 @@ queTwo.forEach(twobutton => {
     const type = twobutton.dataset.answer;
   scores[type]++;
   console.log(scores);
+  queTwo.forEach(bttn => {
+    bttn.classList.remove("selected");
     queTwo.forEach(btn => {
       btn.disabled = true;
     });
+  });
   });
 });
 const queThr = document.querySelectorAll(".qThr");
@@ -42,23 +48,28 @@ queThr.forEach(thrbutton => {
      const type = thrbutton.dataset.answer;
   scores[type]++;
   console.log(scores);
+    queThr.forEach(bttn => {
+        bttn.classList.remove("selected");
    queThr.forEach(btn => { 
       btn.disabled = true;
     });
+  });
   });
 });
 const queFor = document.querySelectorAll(".qFor");
 
 queFor.forEach(forbutton => {
   forbutton.addEventListener("click", () => {
-    forbutton.classList.add("selected")
+    forbutton.classList.add("selected");
     const type = forbutton.dataset.answer;
   scores[type]++;
-  console.log(scores);  
+  console.log(scores);
+    queFor.forEach(bttn => {   
+        bttn.classList.remove("selected");
    queFor.forEach(btn => {
       btn.disabled = true;
-    ;
     });
+  });
   });
 });
 
