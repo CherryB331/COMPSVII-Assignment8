@@ -1,7 +1,7 @@
 .selected {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
+    background-color: #007bff !important;
+    color: white !important;
+    border-color: #007bff !important;
 }
   .btn btn-outline-primary w-100 answer-btn {color:(rgb(235, 20, 217));}
 
@@ -11,4 +11,3 @@
     #result-red {background-color: rgb(243, 138, 138);color:#3e0202}
     #result-rainbow {background-color: rgb(216, 128, 216);color:rgb(51, 50, 13)}
     #announce {color: rgb(0, 0, 0); font-size: 24px; font-weight: bold;}
-    
