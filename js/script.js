@@ -54,7 +54,7 @@ queFor.forEach(forbutton => {
 
 function getResult() {
 let counter = {};
-scores.forEach(type => {counter[type] = (counter[type] || 0) + 1;});
+Object.keys(scores).forEach(type => {counter[type] = (counter[type] || 0) + 1;});
 
   let highest = 0;
   let result = "";
