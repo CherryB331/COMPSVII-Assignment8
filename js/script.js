@@ -6,7 +6,7 @@ const scores = {
   red : 0,  
 };
 const queOne = document.querySelectorAll("#qOne");
-funtion questionContainer() {
+function questionOne() {
 queOne.forEach(button => {
   button.addEventListener("click", () => {
      const type = button.dataset.answer;    
