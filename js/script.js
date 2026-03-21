@@ -1,10 +1,6 @@
 console.log("script.js connected!");
-let scores = [
-  brown : 0, 
-  blue : 0,
-  green : 0, 
-  red : 0,  
-];
+let scores = [red, blue, green, brown] = [0, 0, 0, 0];
+
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
   button.addEventListener("click", () => {
