@@ -12,7 +12,8 @@ document.getElementById("result-brown").style.display = "none";
 document.getElementById("result-rainbow").style.display = "none";
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", () => { 
+    button.classList.add("selected");
      const type = button.dataset.answer;    
   scores[type]++;
   console.log(scores);
@@ -23,7 +24,8 @@ queOne.forEach(button => {
 });
 const queTwo = document.querySelectorAll("#qTwo");
 queTwo.forEach(twobutton => {
-  twobutton.addEventListener("click", () => { 
+  twobutton.addEventListener("click", () => {  
+    twobutton.classList.add("selected");
     const type = twobutton.dataset.answer;
   scores[type]++;
   console.log(scores);
@@ -34,12 +36,12 @@ queTwo.forEach(twobutton => {
 });
 const queThr = document.querySelectorAll("#qThr");
 queThr.forEach(thrbutton => {
-  thrbutton.addEventListener("click", () => {  
+  thrbutton.addEventListener("click", () => {   
+    thrbutton.classList.add("selected");
      const type = thrbutton.dataset.answer;
   scores[type]++;
   console.log(scores);
    queThr.forEach(btn => { 
- 
       btn.disabled = true;
     });
   });
@@ -47,12 +49,13 @@ queThr.forEach(thrbutton => {
 const queFor = document.querySelectorAll("#qFor");
 
 queFor.forEach(forbutton => {
-  forbutton.addEventListener("click", () => {  
+  forbutton.addEventListener("click", () => {forbutton.classList.add("selected")
     const type = forbutton.dataset.answer;
   scores[type]++;
   console.log(scores);  
    queFor.forEach(btn => {
       btn.disabled = true;
+    ;
     });
   });
 });
@@ -97,32 +100,33 @@ const restartBtn = document.getElementById("restart-quiz");
 
     
 function restartQuiz() {
-  // Reset scores
+
   scores.blue = 0;
   scores.brown = 0;
   scores.green = 0;
   scores.red = 0;
-
-  // Show quiz again
   document.getElementById("question-container").style.display = "block";
   document.getElementById("show-result").style.display = "block";
-
-  // Hide result sections
   document.getElementById("announce").style.display = "none";
   document.getElementById("result-container").style.display = "none";
-
-  // Hide all individual results
   const allResults = ["blue", "brown", "green", "red", "rainbow"];
   allResults.forEach(color => {
-    const el = document.getElementById("result-" + color);
-    if (el) el.style.display = "none";
+    const rs = document.getElementById("result-" + color);
+    if (rs) rs.style.display = "none";});
+
+    const allQuestions = [queOne, queTwo, queThr, queFor];
+  allQuestions.forEach(questionGroup => {
+    questionGroup.forEach(btn => {
+      btn.disabled = false; 
+      btn.classList.remove("selected");
+    });
   });
 
   console.log("Quiz reset. Scores:", scores);
 }
- 
-  const shwResultBtn = document.querySelector("#show-result");
-  restartBtn.addEventListener ("click", (restartQuiz));
+
+const shwResultBtn = document.querySelector("#show-result");
+restartBtn.addEventListener("click", restartQuiz);
 let questionContainer = document.getElementById("question-container");
 let announcement = document.getElementById("announce");
 console.log(questionContainer);
