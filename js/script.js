@@ -79,6 +79,7 @@ function showColorResult() {
     console.log("Scores:", scores);
     console.log("highest score:", result + " with a score of " + highest);
     console.log(result)
+    console.log(document.getElementById("result-" + result))
 document.getElementById("question-container").style.display = "none";
 document.getElementById("show-result").style.display = "none";
 document.getElementById("announce").style.display = "block";
