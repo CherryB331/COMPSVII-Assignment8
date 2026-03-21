@@ -5,7 +5,6 @@ let scores = {
   green: 0,
   red: 0
 };
-let colorScore = [ scores.blue, scores.brown, scores.green, scores.red];
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
   button.addEventListener("click", () => {
@@ -54,9 +53,6 @@ queFor.forEach(forbutton => {
 });
 
 function getResult() {
-let counter = {};
-colorScore.forEach(type => {counter[type] = (counter[type] || 0) + 1;});
-
   let highest = 0;
   let result = "";
 
@@ -73,7 +69,7 @@ colorScore.forEach(type => {counter[type] = (counter[type] || 0) + 1;});
 }
 let highest = 0;
 let result = getResult();
-let colorEnd = document.getElementById("#result-container");
+let colorEnd = document.getElementById("result-container");
 function showColorResult() {
     const colorResult = getResult();
     console.log("Your color is " + colorResult + ": " + descriptions[colorResult]);
@@ -91,8 +87,8 @@ const descriptions = {
   red: "You are an Adventurer! You love excitement. You're full of a firey passion that can't be tamed.",
   rainbow: "You are a unique individual! You don't fit into any one category, and that's what makes you special."
 };
-  const shwResultBtn = document.querySelector("#show-result");
-let questionContainer = document.getElementById("#question-container");
-let announcement = document.getElementById("#announce");
+  const shwResultBtn = document.querySelector("show-result");
+let questionContainer = document.getElementById("question-container");
+let announcement = document.getElementById("announce");
 console.log(questionContainer);
 shwResultBtn.addEventListener("click", showColorResult);
