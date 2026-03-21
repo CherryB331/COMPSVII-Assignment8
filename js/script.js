@@ -70,8 +70,8 @@ function getResult() {
 let result = getResult();
 let colorEnd = document.getElementById("result-container");
 function showColorResult() {
-    const colorResult = getResult();
-    console.log("Your color is " + colorResult + ": " + descriptions[colorResult]);
+    const {result, highest} = getResult();
+    console.log("Your color is " + result + ": " + descriptions[result]);
     console.log("Scores:", scores);
     console.log("highest score:", result + " with a score of " + highest);
     console.log(result)
