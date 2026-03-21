@@ -5,7 +5,7 @@ let scores = {
   green: 0,
   red: 0
 };
-
+let colorScore = [blue, brown, green, red];
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
   button.addEventListener("click", () => {
@@ -55,7 +55,7 @@ queFor.forEach(forbutton => {
 
 function getResult() {
 let counter = {};
-scores.forEach(type => {counter[type] = (counter[type] || 0) + 1;});
+colorScore.forEach(type => {counter[type] = (counter[type] || 0) + 1;});
 
   let highest = 0;
   let result = "";
