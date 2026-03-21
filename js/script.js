@@ -65,13 +65,8 @@ function getResult() {
   if (highest <= 2) {
     result = "rainbow";
   }
-  return result;
+  return { result, highest };
 }
-let highest = 0;
-for (let type in scores) 
-  if (scores[type] > highest) {
-    highest = scores[type];
-  }
 let result = getResult();
 let colorEnd = document.getElementById("result-container");
 function showColorResult() {
