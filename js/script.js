@@ -90,3 +90,8 @@ let questionContainer = document.getElementById("question-container");
 let announcement = document.getElementById("announce");
 console.log(questionContainer);
 shwResultBtn.addEventListener("click", showColorResult);
+let redResult = document.getElementById("result-red");
+let blueResult = document.getElementById("result-blue");
+let greenResult = document.getElementById("result-green");
+let brownResult = document.getElementById("result-brown");
+let rainbowResult = document.getElementById("result-rainbow");
