@@ -93,18 +93,10 @@ const descriptions = {
 function showColorResult( ){
   const result = getResult();
   const description = descriptions[result];
-
+let quizContainer = document.getElementById("quiz-container");
+console.log(quizContainer);
   descriptions.textContent = "Your color is " + result + ": " + description;
 console.log("Your color is " + result + ": " + descriptions[result])};
-const questionContainer = document.getElementById("question-container");
+let questionContainer = document.getElementById("question-container");
+console.log(questionContainer);
 shwResultBtn.addEventListener("click", showColorResult);
-let azul = document.getElementById("#azul");
-let marron = document.getElementById("#marron");
-let verde = document.getElementById("#verde");
-let rojo  = document.getElementById("#rojo");
-let rainBow = document.getElementById("#rainbow");
-
-if (getResult() === "blue") {azul.style.display = "block";}
-else if (getResult() === "brown") {marron.style.display = "block";}
-else if (getResult() === "green") {verde.style.display = "block";}
-else if (getResult() === "red") {rojo.style.display = "block";}
