@@ -8,13 +8,19 @@ let scores = {
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
   button.addEventListener("click", () => {
+        const type = button.dataset.answer;
+  scores[type]++;
+  console.log(scores);
     queOne.forEach(btn => {
       btn.disabled = true;
     });
   });
 });
 const queTwo = document.querySelectorAll("#qTwo");
-queTwo.forEach(button => {
+queTwo.forEach(twobutton => {
+     const type = twobutton.dataset.answer;
+  scores[type]++;
+  console.log(scores);
   button.addEventListener("click", () => {
     queTwo.forEach(btn => {
       btn.disabled = true;
@@ -22,7 +28,10 @@ queTwo.forEach(button => {
   });
 });
 const queThr = document.querySelectorAll("#qThr");
-queThr.forEach(button => {
+queThr.forEach(thrbutton => {
+      const type = thrbutton.dataset.answer;
+  scores[type]++;
+  console.log(scores);
   button.addEventListener("click", () => {
    queThr.forEach(btn => {
       btn.disabled = true;
@@ -30,38 +39,16 @@ queThr.forEach(button => {
   });
 });
 const queFor = document.querySelectorAll("#qFor");
-queFor.forEach(button => {
+queFor.forEach(forbutton => {
+      const type = forbutton.dataset.answer;
+  scores[type]++;
+  console.log(scores);
   button.addEventListener("click", () => {
    queFor.forEach(btn => {
       btn.disabled = true;
     });
   });
 });
-
-queOne.forEach(onescoring => {
-onescoring.addEventListener("click", () => {
-  const type = onescoring.dataset.answer;
-  scores[type]++;
-  console.log(scores);
-})})
-queTwo.forEach(twoscoring => {
-twoscoring.addEventListener("click", () => {
-  const type = twoscoring.dataset.answer;
-  scores[type]++;
-  console.log(scores);
-})})
-queThr.forEach(thrscoring => {
-thrscoring.addEventListener("click", () => {
-  const type = thrscoring.dataset.answer;
-  scores[type]++;
-  console.log(scores);
-})})
-queFor.forEach(forscoring => {
-forscoring.addEventListener("click", () => {
-  const type = forscoring.dataset.answer;
-  scores[type]++;
-  console.log(scores);
-})})
 
 function getResult() {
   let highest = 0;
@@ -74,7 +61,7 @@ function getResult() {
     }
   }
   if (highest <= 2) {
-    return "rainbow";
+    result = "rainbow";
   }
   return result;
 }
