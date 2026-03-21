@@ -5,6 +5,11 @@ let scores = {
   green: 0,
   red: 0
 };
+document.getElementById("result-red").style.display = "none";
+document.getElementById("result-blue").style.display = "none";
+document.getElementById("result-green").style.display = "none";
+document.getElementById("result-brown").style.display = "none";
+document.getElementById("result-rainbow").style.display = "none";
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
   button.addEventListener("click", () => {
