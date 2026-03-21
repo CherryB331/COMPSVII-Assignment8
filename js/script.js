@@ -21,7 +21,7 @@ queTwo.forEach(twobutton => {
      const type = twobutton.dataset.answer;
   scores[type]++;
   console.log(scores);
-  button.addEventListener("click", () => {
+  twobutton.addEventListener("click", () => {
     queTwo.forEach(btn => {
       btn.disabled = true;
     });
@@ -32,7 +32,7 @@ queThr.forEach(thrbutton => {
       const type = thrbutton.dataset.answer;
   scores[type]++;
   console.log(scores);
-  button.addEventListener("click", () => {
+  thrbutton.addEventListener("click", () => {
    queThr.forEach(btn => {
       btn.disabled = true;
     });
@@ -43,7 +43,7 @@ queFor.forEach(forbutton => {
       const type = forbutton.dataset.answer;
   scores[type]++;
   console.log(scores);
-  button.addEventListener("click", () => {
+  forbutton.addEventListener("click", () => {
    queFor.forEach(btn => {
       btn.disabled = true;
     });
