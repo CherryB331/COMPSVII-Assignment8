@@ -1,4 +1,4 @@
-console.log("script.js connected!");let scores = {
+console.log("script.js connected!");
 let scores = {
   blue: 0,
   brown: 0,
