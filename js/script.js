@@ -1,10 +1,5 @@
 console.log("script.js connected!");
-let scores = {
-  brown : 0, 
-  blue : 0,
-  green : 0, 
-  red : 0,  
-};
+
 const queOne = document.querySelectorAll("#qOne");
 queOne.forEach(button => {
   button.addEventListener("click", () => {
@@ -54,6 +49,12 @@ queFor.forEach(forbutton => {
 
 function getResult() {
 let counter = {};
+let scores = {
+  brown : 0, 
+  blue : 0,
+  green : 0, 
+  red : 0,  
+};
 scores.forEach(type => {counter[type] = (counter[type] || 0) + 1;});
 
   let highest = 0;
