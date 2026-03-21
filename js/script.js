@@ -79,7 +79,11 @@ function getResult() {
   }
   return result;
 }
-
+function showColorResult() {
+    let result = getResult();
+    document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("announce" + "result-" + result).style.display = "block";
+}
 
 const descriptions = {
   blue: "You are in tune to your emotions. Sometimes they are overwhelming, but it's one of your strengths.",
