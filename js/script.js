@@ -65,7 +65,7 @@ forscoring.addEventListener("click", () => {
 })})
 
 function getResult() {
-  let highest = 2;
+  let highest = 0;
   let result = "";
 
   for (let type in scores) {
@@ -74,7 +74,7 @@ function getResult() {
       result = type;
     }
   }
-  if (result === "") {
+  if (highest <= 2) {
     result = "rainbow";
   }
   return result;
