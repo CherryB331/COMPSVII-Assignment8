@@ -79,6 +79,7 @@ function getResult() {
   }
   return result;
 }
+let result = getResult();
 let colorEnd = document.getElementById("#result-container");
 function showColorResult() {
     const colorResult = getResult();
