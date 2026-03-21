@@ -6,7 +6,6 @@ const scores = {
   red : 0,  
 };
 const queOne = document.querySelectorAll("#qOne");
-function questionOne() {
 queOne.forEach(button => {
   button.addEventListener("click", () => {
      const type = button.dataset.answer;    
@@ -16,43 +15,40 @@ queOne.forEach(button => {
       btn.disabled = true;
     });
   });       
-});;};
+});;
 const queTwo = document.querySelectorAll("#qTwo");
-function questionTwo(){
 queTwo.forEach(twobutton => {
-     const type = twobutton.dataset.answer;
+  twobutton.addEventListener("click", () => { 
+    const type = twobutton.dataset.answer;
   scores[type]++;
   console.log(scores);
-  twobutton.addEventListener("click", () => {
     queTwo.forEach(btn => {
       btn.disabled = true;
     });
   });
-});};
+});
 const queThr = document.querySelectorAll("#qThr");
-function questionThree() {
 queThr.forEach(thrbutton => {
-      const type = thrbutton.dataset.answer;
+  thrbutton.addEventListener("click", () => {
+   queThr.forEach(btn => { 
+    const type = thrbutton.dataset.answer;
   scores[type]++;
   console.log(scores);
-  thrbutton.addEventListener("click", () => {
-   queThr.forEach(btn => {
       btn.disabled = true;
     });
   });
 });};
 const queFor = document.querySelectorAll("#qFor");
-function questionFour() {
+
 queFor.forEach(forbutton => {
-      const type = forbutton.dataset.answer;
+  forbutton.addEventListener("click", () => {   
+   queFor.forEach(btn => { const type = forbutton.dataset.answer;
   scores[type]++;
   console.log(scores);
-  forbutton.addEventListener("click", () => {
-   queFor.forEach(btn => {
       btn.disabled = true;
     });
   });
-});};
+});
 
 function getResult() {
   let highest = 0;
