@@ -15,7 +15,7 @@ queOne.forEach(button => {
       btn.disabled = true;
     });
   });       
-});;
+});
 const queTwo = document.querySelectorAll("#qTwo");
 queTwo.forEach(twobutton => {
   twobutton.addEventListener("click", () => { 
@@ -37,7 +37,7 @@ queThr.forEach(thrbutton => {
       btn.disabled = true;
     });
   });
-});};
+});
 const queFor = document.querySelectorAll("#qFor");
 
 queFor.forEach(forbutton => {
