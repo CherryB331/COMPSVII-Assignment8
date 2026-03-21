@@ -68,7 +68,7 @@ function getResult() {
   return result;
 }
 let highest = 0;
-for (let type in scores) {
+for (let type in scores) 
   if (scores[type] > highest) {
     highest = scores[type];
   }
