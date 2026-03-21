@@ -79,7 +79,7 @@ function getResult() {
   }
   return result;
 }
-
+let colorEnd = document.getElementById("#result-container");
 function showColorResult() {
     const colorResult = getResult();
     console.log("Your color is " + colorResult + ": " + descriptions[colorResult]);
