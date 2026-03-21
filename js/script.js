@@ -80,10 +80,10 @@ function getResult() {
   return result;
 }
 function showColorResult() {
-    let result = getResult();
+    let resulty = getResult();
     document.getElementById("quiz-container").style.display = "none";
-    document.getElementById("announce" + "result-" + result).style.display = "block";
-    console.log("Your color is " + result + ": " + descriptions[result]);
+    document.getElementById("announce" + "result-" + resulty).style.display = "block";
+    console.log("Your color is " + resulty + ": " + descriptions[resulty]);
 }
 
 const descriptions = {
