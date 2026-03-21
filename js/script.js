@@ -84,6 +84,8 @@ function showColorResult() {
     const colorResult = getResult();
     console.log("Your color is " + colorResult + ": " + descriptions[colorResult]);
 document.getElementById("question-container").style.display = "none";
+doccument.getElementById("show-result").style.display = "none";
+document.getElementById("announce").style.display = "block";
 document.getElementById("result-" + colorResult).style.display = "block";}
 const descriptions = {
   blue: "You are in tune to your emotions. Sometimes they are overwhelming, but it's one of your strengths.",
