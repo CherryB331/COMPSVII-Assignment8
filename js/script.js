@@ -17,11 +17,12 @@ queOne.forEach(button => {
      const type = button.dataset.answer;    
   scores[type]++;
   console.log(scores);
-  queOne.forEach(bttn => 
-    {bttn.classList.remove("selected"); } );
+  queOne.forEach(btn => 
+    btn.classList.remove("selected");); 
+     button.classList.add("selected")
     queOne.forEach(btn => 
       {btn.disabled = true;});
-   button.classList.add("selected");
+;
   });
 });
 const queTwo = document.querySelectorAll(".qTwo");
@@ -31,8 +32,8 @@ queTwo.forEach(twobutton => {
     const type = twobutton.dataset.answer;
   scores[type]++;
   console.log(scores);
-  queTwo.forEach(bttn => {
-    bttn.classList.remove("selected"); });
+  queTwo.forEach(btn => 
+    btn.classList.remove("selected"););
     twobutton.classList.add("selected");
     queTwo.forEach(btn => 
      { btn.disabled = true;});
@@ -45,8 +46,8 @@ queThr.forEach(thrbutton => {
      const type = thrbutton.dataset.answer;
   scores[type]++;
   console.log(scores);
-    queThr.forEach(bttn => {
-        bttn.classList.remove("selected");});
+    queThr.forEach(btn => 
+        btn.classList.remove("selected"););
     thrbutton.classList.add("selected");    
    queThr.forEach(btn => { 
       btn.disabled = true;
@@ -61,8 +62,8 @@ queFor.forEach(forbutton => {
     const type = forbutton.dataset.answer;
   scores[type]++;
   console.log(scores);
-    queFor.forEach(bttn => {   
-     bttn.classList.remove("selected");});
+    queFor.forEach(btn =>  
+     btn.classList.remove("selected"););
     forbutton.classList.add("selected");
    queFor.forEach(btn => {
       btn.disabled = true;
