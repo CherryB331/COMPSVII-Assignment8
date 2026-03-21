@@ -83,6 +83,7 @@ let colorEnd = document.getElementById("#result-container");
 function showColorResult() {
     const colorResult = getResult();
     console.log("Your color is " + colorResult + ": " + descriptions[colorResult]);
+    console.log(result)
 document.getElementById("question-container").style.display = "none";
 document.getElementById("show-result").style.display = "none";
 document.getElementById("announce").style.display = "block";
