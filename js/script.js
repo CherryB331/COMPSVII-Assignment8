@@ -1,4 +1,5 @@
 console.log("script.js connected!");
+console.log("What is your color?");
 let scores = {
   blue: 0,
   brown: 0,
