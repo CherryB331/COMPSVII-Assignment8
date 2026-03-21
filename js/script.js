@@ -84,7 +84,7 @@ function showColorResult() {
     const colorResult = getResult();
     console.log("Your color is " + colorResult + ": " + descriptions[colorResult]);
 document.getElementById("question-container").style.display = "none";
-document.getElementById("announce" + "result-" + colorResult).style.display = "block";}
+document.getElementById("result-" + colorResult).style.display = "block";}
 const descriptions = {
   blue: "You are in tune to your emotions. Sometimes they are overwhelming, but it's one of your strengths.",
   brown: "You crave stability. If type A was a color; it would be brown.You are a Thinker! You analyze everything.",
